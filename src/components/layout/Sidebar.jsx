@@ -8,7 +8,7 @@ export default function Sidebar({ activeCategory, onCategoryChange }) {
     : [];
     
   // Filter out duplicates so you get a clean string list: ["Trousers", "Shirts"]
-  const categoriesList = [...new Set(allCategories)].filter(Boolean);
+  const categoriesList = ["All",...new Set(allCategories)].filter(Boolean);
 
   return (
     <div className="layout-container">
@@ -22,7 +22,7 @@ export default function Sidebar({ activeCategory, onCategoryChange }) {
                 onClick={() => onCategoryChange(categoryName)}
                 style={{ cursor: 'pointer' }}
               >
-                <span className="category-name">{categoryName}</span>
+                <span className="hover:bg-stone-950 hover:text-white text-1xl">{categoryName}</span>
               </button>
             </li>
           ))}
