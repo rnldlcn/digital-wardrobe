@@ -1,5 +1,6 @@
 import { useState } from "react";
-import ClosetGrid from "./components/closet/ClosetGrid";
+
+import ClosetWorkspace from "./components/closet/ClosetWorkspace";
 import Header from "./components/layout/Header";
 import Sidebar from "./components/layout/Sidebar";
 function App() {
@@ -14,7 +15,7 @@ function App() {
       </div>
 
       <div className="w-full md:w-3/4">
-        <ClosetGrid activeCategory={activeCategory} />
+        <ClosetWorkspace activeCategory={activeCategory} />
       </div>
     </div>
     </div>
